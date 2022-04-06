@@ -1,14 +1,13 @@
 package ru.netology.domain;
-
 public class Poster {
     public static void main(String[] args) {
-        FilmsInfo first = new FilmsInfo(1, "Bloodshot");
-        FilmsInfo second = new FilmsInfo(2, "Onward");
-        FilmsInfo third = new FilmsInfo(3, "Отель'Белград");
-        FilmsInfo fourth = new FilmsInfo(4, "The Gentlemen");
-        FilmsInfo fifth = new FilmsInfo(5, "The Invisible Man");
-        FilmsInfo sixth = new FilmsInfo(6, "Trolls World Tour");
-        FilmsInfo seventh = new FilmsInfo(7, "Номер Один");
+        FilmsInfo first = new FilmsInfo();
+        FilmsInfo second = new FilmsInfo();
+        FilmsInfo third = new FilmsInfo();
+        FilmsInfo fourth = new FilmsInfo();
+        FilmsInfo fifth = new FilmsInfo();
+        FilmsInfo sixth = new FilmsInfo();
+        FilmsInfo seventh = new FilmsInfo();
     }
 
     private FilmsInfo[] films = new FilmsInfo[0];
@@ -27,11 +26,17 @@ public class Poster {
         return films;
     }
 
-    public FilmsInfo[] findLast() {
-        FilmsInfo[] result = new FilmsInfo[films.length];
+    public FilmsInfo[] findLast(int resultLength) {
+        FilmsInfo params = new FilmsInfo();
+        if (resultLength > films.length){
+            resultLength = films.length;
+        } else {
+          resultLength = resultLength;
+        }
+        FilmsInfo[] result = new FilmsInfo[resultLength];
         for (int i = 0; i < result.length; i++) {
             int index = films.length - i - 1;
-            result[i] = index[i];
+            result[i] = films[index];
         }
         return result;
     }
