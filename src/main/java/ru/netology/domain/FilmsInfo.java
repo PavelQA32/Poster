@@ -11,10 +11,4 @@ import lombok.NoArgsConstructor;
 public class FilmsInfo {
     private int id;
     private String name;
-    private int resultLength = 10;
-
-    public FilmsInfo(int resultLength) {
-        this.resultLength = resultLength;
-    }
-
 }
