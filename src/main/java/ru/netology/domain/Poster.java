@@ -1,8 +1,10 @@
 package ru.netology.domain;
+
+import java.lang.reflect.Field;
+
 public class Poster {
     public static void main(String[] args) {
     }
-
     private FilmsInfo[] films = new FilmsInfo[0];
 
     public void save(FilmsInfo film) {
