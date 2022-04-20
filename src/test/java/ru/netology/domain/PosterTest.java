@@ -38,8 +38,9 @@ class PosterTest {
         FilmsInfo[] actual = list.findLast(5);
         assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void findLastTest(){
+    public void findLastTest() {
         Poster list = new Poster();
         list.save(first);
         list.save(second);
@@ -52,8 +53,29 @@ class PosterTest {
         list.save(ninth);
         list.save(tenth);
         list.save(eleventh);
-        FilmsInfo[] expected = {eleventh,tenth,ninth,eighth,seventh,sixth,fifth,fourth,third,second};
-        FilmsInfo[] actual = list.findLast();;
-        assertArrayEquals(expected,actual);
+        FilmsInfo[] expected = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
+        FilmsInfo[] actual = list.findLast();
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldShouListOfFilmsWithLimit() {
+        Poster list = new Poster();
+        list.save(first);
+        list.save(second);
+        list.save(third);
+        list.save(fourth);
+        list.save(fifth);
+        list.save(sixth);
+        list.save(seventh);
+        list.save(eighth);
+        list.save(ninth);
+        list.save(tenth);
+        list.save(eleventh);
+
+        FilmsInfo[] expected = {eleventh, tenth, ninth, eighth};
+        FilmsInfo[] actual = list.findLastWhitsParams(4);
+
+        assertArrayEquals(expected, actual);
     }
 }
