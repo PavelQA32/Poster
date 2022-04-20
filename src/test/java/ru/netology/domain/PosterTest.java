@@ -74,7 +74,7 @@ class PosterTest {
         list.save(eleventh);
 
         FilmsInfo[] expected = {eleventh, tenth, ninth, eighth};
-        FilmsInfo[] actual = list.findLastWhitsParams(4);
+        FilmsInfo[] actual = list.findLastWithParams(4);
 
         assertArrayEquals(expected, actual);
     }

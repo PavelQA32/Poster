@@ -44,7 +44,7 @@ public class Poster {
         return result;
     }
 
-    public FilmsInfo[] findLastWhitsParams(int resultLength) {
+    public FilmsInfo[] findLastWithParams(int resultLength) {
         FilmsInfo[] result = new FilmsInfo[resultLength];
         for (int i = 0; i < result.length; i++) {
             int index = films.length - i - 1;
